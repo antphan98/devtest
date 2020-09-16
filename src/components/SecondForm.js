@@ -1,17 +1,16 @@
 import React from "react";
-import "./App.css";
 import { useEffect, useState } from "react";
 import fetch from "node-fetch";
-import { Button, Form, Row, Col, Container } from "react-bootstrap";
-import SecondForm from "./components/SecondForm";
+import "bootstrap/dist/css/bootstrap.min.css";
+import { Button, Form, InputGroup, Col, Row, Container } from "react-bootstrap";
 
-function App() {
+function SecondForm() {
   const [results, setResults] = useState([]);
   const [error, setError] = useState(null);
 
   useEffect(() => {
     async function fetchData() {
-      fetch("./form1.json")
+      fetch("./form2.json")
         .then((res) => res.json())
         .then(
           (response) => {
@@ -25,13 +24,14 @@ function App() {
     }
     fetchData();
   }, []);
+
   const createMarkup = (result) => {
     return (
       <Container>
               
         <div dangerouslySetInnerHTML={{ __html: result.content }} />
-              
-        <Row>
+        <div className="input-group">
+               
           {result.fields.map((field) => {
             let colSize;
             if (field.colSize === "Auto") {
@@ -39,7 +39,6 @@ function App() {
             } else {
               colSize = Number(field.colSize);
             }
-
             if (field.type === "FormText") {
               return (
                 <Col key={field.key} xs={colSize}>
@@ -87,15 +86,58 @@ function App() {
                 <Col key={field.key} xs={colSize}>
                   <Form>
                     <Form.Label>{field.label}</Form.Label>
-                    <Form.File id="custom-file" label="" custom />
+                    <Form.File id="custom-file" custom />
                     <p>{field.help}</p>
                   </Form>
                 </Col>
               );
             }
+            if (field.type === "FormDate") {
+              return (
+                <Col key={field.key} xs={colSize}>
+                  <Form>
+                    <Form.Label>{field.label}</Form.Label>
+                    <Form.Control
+                      type={field.type}
+                      placeholder={field.placeholder}
+                    />
+                  </Form>
+                </Col>
+              );
+            }
+
+            if (field.type === "FormTextarea") {
+              return (
+                <Col key={field.key} xs={colSize}>
+                  <Form>
+                    <Form.Label>{field.label}</Form.Label>
+                    <Form.Control
+                      type={field.type}
+                      placeholder={field.placeholder}
+                    />
+                    <p>{field.help}</p>
+                  </Form>
+                </Col>
+              );
+            }
+            if (field.type === "FormRadio") {
+              return (
+                <Col key={field.key} xs={colSize}>
+                  <Form.Label>{field.label}</Form.Label>
+                  <InputGroup>
+                    <InputGroup.Radio name="button" />
+                    {field.options[0].name}
+                    <InputGroup.Radio name="button" />
+                    {field.options[1].name}
+                  </InputGroup>
+                  <p>{field.help}</p>
+                </Col>
+              );
+            }
           })}
               
-        </Row>
+        </div>
+         
       </Container>
     );
   };
@@ -110,9 +152,8 @@ function App() {
         ))}
 
         <Button>Submit</Button>
-        <SecondForm />
       </div>
     );
   }
 }
-export default App;
+export default SecondForm;

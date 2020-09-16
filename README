@@ -1,0 +1,55 @@
+# Description
+
+Attached are two JSON files that containing form schemas that are used to render web form structures. The task is to write front end code read in the schema and display a formatted form. The code should work both provided schemas.
+
+The format of the json structure is described below:
+
+## Root Form Schema (Array)
+
+Each Object in the form schema array represents a row level element. Row level elements span the entire width of the containing element and  have the following attributes
+
+## Row level object
+
+| Name | Description |
+| ----------- | ----------- |
+| type | (String) specifies what type of object the row element is |
+| content | (String) Contains an html scring to be displayed if type is FreeText |
+| fields | (Array) A list of field objects to be displayed if type is row |
+
+### Types
+
+| Name | Description |
+| ----------- | ----------- |
+| FreeText | Options: FreeText |
+| HR | A section separator `<hr>` |
+| Row | An object that contains input fields to be displayed |
+
+## Field level object
+
+| Name | Description |
+| ----------- | ----------- |
+| sideName | (String) Alternate type label - can be ignored for this project |
+| label | (String) Text for the input field label |
+| type | (String) Type of input field the object describes |
+| required | (Boolean) If input is required for form submission |
+| help | (String) Content to display below the input or as a tooltip for additional context/requirements |
+| colSize | (String) Auto or 1-12.  Row is divided into 12 columns, where 1 is 6 is  50% and 12 corresponds to 100% of the row width. |fields in a row that add up to over 12 should wrap to the next line,
+| placeholder | (String) Content used for an imput fields placeholder attribute |
+| key | (Integer) Unique integer that ids a field. Can be used to tie a name/id that can reference the schema |
+| multiple | (Boolean) Designates if an option group like Select, is allowed to return muliple selcted options |
+| inline | (Boolean) Whether to display checkbox/radio options on next to each other, or on a new line |
+| Options | (Array) Lists option Objects for selects, checkboxes and radio items. The options objects have properties for name, price, alias, quantity but the only one you will need is name |
+| isPriced | (Boolean) This property can be ignored |
+
+### Field Types
+
+| Name | Description |
+| ----------- | ----------- |
+| FormText | for text fields (input[type=text]) |
+| FormTextarea | A text area element |
+| FormRadio | A radio button group |
+| FormCheckbox | A checkbox group |
+| File | A file upload input |
+| FormEmail | Email input field |
+| FormDate | Date input field |
+| FormPhone | Input field for phone numbers |

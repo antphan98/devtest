@@ -1,0 +1,332 @@
+[
+    {
+        "fields": [],
+        "type": "FreeText",
+        "sideName": "Text",
+        "content": "<h1 class=\"ql-align-center\">Dog License Application</h1><p class=\"ql-align-center\"><br></p><p class=\"ql-align-center\">Dogs must be registered in the city before April 1st each year</p><p class=\"ql-align-center\">Please fill out this form</p>"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "Text Field",
+                "label": "Owner First Name",
+                "type": "FormText",
+                "required": true,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": true,
+                "isPrimaryLast": false,
+                "key": 2
+            },
+            {
+                "sideName": "Text Field",
+                "label": "Middle Initial",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "2",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 29
+            },
+            {
+                "sideName": "Text Field",
+                "label": "Owner Last Name",
+                "type": "FormText",
+                "required": true,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": true,
+                "key": 1
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "Text Field",
+                "label": "Residential Address (required)",
+                "type": "FormText",
+                "required": true,
+                "help": "",
+                "colSize": "10",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 4
+            },
+            {
+                "sideName": "Text Field",
+                "label": "Apt #",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 5
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "Email",
+                "label": "Email Address",
+                "type": "FormEmail",
+                "required": true,
+                "colSize": "Auto",
+                "isPrimary": true,
+                "help": "This is the email that we will use to contact you",
+                "key": 13
+            },
+            {
+                "sideName": "Email",
+                "label": "Secondary Email",
+                "type": "FormEmail",
+                "required": false,
+                "colSize": "Auto",
+                "isPrimary": false,
+                "help": "This is in case we cannot reach you via phone or your primary email",
+                "key": 23
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "Text Field",
+                "label": "City",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "6",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 7
+            },
+            {
+                "sideName": "Text Field",
+                "label": "State",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 6
+            },
+            {
+                "sideName": "Text Field",
+                "label": "Zip",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 8
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "Phone",
+                "label": "Home Phone Phone",
+                "type": "FormPhone",
+                "required": true,
+                "isPrimary": true,
+                "colSize": "Auto",
+                "help": "",
+                "key": 10
+            },
+            {
+                "sideName": "Phone",
+                "label": "Work Phone",
+                "type": "FormPhone",
+                "required": false,
+                "isPrimary": false,
+                "colSize": "Auto",
+                "help": "",
+                "key": 11
+            },
+            {
+                "sideName": "Phone",
+                "label": "Alternate Phone",
+                "type": "FormPhone",
+                "required": false,
+                "isPrimary": false,
+                "colSize": "Auto",
+                "help": "",
+                "key": 9
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "Text Field",
+                "label": "Dog Primary/Secondary Breed",
+                "type": "FormText",
+                "required": false,
+                "help": "If unknown, list breed most resembles",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 14
+            },
+            {
+                "sideName": "Select",
+                "label": "Sex",
+                "type": "FormSelect",
+                "multiple": false,
+                "options": [
+                    {
+                        "name": "Male",
+                        "price": 0,
+                        "alias": "",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Female",
+                        "price": 0,
+                        "alias": "",
+                        "quantity": 1
+                    }
+                ],
+                "colSize": "Auto",
+                "required": false,
+                "placeholder": "-- Select an Option --",
+                "key": 15,
+                "isPriced": false
+            },
+            {
+                "sideName": "Checkbox",
+                "label": "",
+                "type": "FormCheckbox",
+                "multiple": true,
+                "inline": false,
+                "options": [
+                    {
+                        "name": "Altered",
+                        "price": 0,
+                        "alias": "",
+                        "quantity": 1
+                    },
+                    {
+                        "name": "Unaltered",
+                        "price": 0,
+                        "alias": "",
+                        "quantity": 1
+                    }
+                ],
+                "colSize": "Auto",
+                "required": false,
+                "key": 17,
+                "isPriced": false
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "Text Field",
+                "label": "Dog Name",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "4",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 18
+            },
+            {
+                "sideName": "Text Field",
+                "label": "Color(s)",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 20
+            },
+            {
+                "sideName": "Text Field",
+                "label": "Weight (Lbs)",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 21
+            },
+            {
+                "sideName": "Text Field",
+                "label": "Age/Birthdate",
+                "type": "FormText",
+                "required": false,
+                "help": "",
+                "colSize": "Auto",
+                "placeholder": "",
+                "isPrimaryFirst": false,
+                "isPrimaryLast": false,
+                "key": 19
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    },
+    {
+        "fields": [
+            {
+                "sideName": "File",
+                "label": "Proof of Companionship",
+                "type": "FormFile",
+                "required": false,
+                "multiple": true,
+                "help": "",
+                "colSize": "6",
+                "key": 25
+            },
+            {
+                "sideName": "File",
+                "label": "Vaccination Records",
+                "type": "FormFile",
+                "required": false,
+                "multiple": true,
+                "help": "Please the most recent copy of your dog's vaccination records",
+                "colSize": "6",
+                "key": 22
+            }
+        ],
+        "type": "Row",
+        "sideName": "Row"
+    }
+]
